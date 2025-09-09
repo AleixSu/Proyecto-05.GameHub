@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+body {
+  background-color: rgb(37, 36, 36);
+}
+.titles {
+  padding: 15px 15px 20px 0;
+}
+.titles > h1 {
+  font-family: 'Cinzel', serif;
+  font-optical-sizing: auto;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+.titles > h3 {
+  font-family: 'Cinzel', serif;
+  font-optical-sizing: auto;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 2s;
+}
+
+.titles > h5 {
+  position: relative;
+  top: -25px;
+  font-family: 'Cinzel', serif;
+  font-optical-sizing: auto;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 3.5s;
+  color: rgba(255, 255, 255, 0.438);
+}
+.titlesEpisode {
+  margin-bottom: -30px;
+  padding: 0 15px 20px 0;
+}
+
+.titlesEpisode > h3 {
+  font-family: 'Cinzel', serif;
+  font-optical-sizing: auto;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 1s;
+}
+.titlesEpisode > h5 {
+  position: relative;
+  top: -25px;
+  font-family: 'Cinzel', serif;
+  font-optical-sizing: auto;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 3s;
+  color: rgba(255, 255, 255, 0.438);
+}
+#app {
+  margin: 100px 30%;
+  text-align: justify;
+  line-height: 1.7;
+  font-family: 'Cormorant Garamond', serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+#episodeText {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 3.5s;
+}
+
+#episodeText > p {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 5s;
+}
+
+#choices {
+  user-select: none;
+}
+#choices > h4 {
+  font-family: 'Cinzel', serif;
+  font-optical-sizing: auto;
+  margin-top: 50px;
+}
+#choices > p {
+  font-weight: 200;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#choices > p > strong {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#choices > p:hover {
+  background-color: rgba(211, 211, 211, 0.397);
+}
+
+.blocked {
+  opacity: 0.1;
+}
+
+#unlockedActionDiv > h4 {
+  font-family: 'Cinzel', serif;
+  font-optical-sizing: auto;
+  margin-top: 50px;
+}
+
+#unlockedActionDiv > p {
+  font-weight: 200;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#unlockedActionDiv > p > strong {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#unlockedActionDiv > p:hover {
+  background-color: rgba(211, 211, 211, 0.397);
+}
+
+#choices {
+  user-select: none;
+}
+#startButton {
+  font-family: 'Cinzel', serif;
+  font-optical-sizing: auto;
+  margin-top: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#startButton:hover {
+  background-color: rgba(211, 211, 211, 0.397);
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.show {
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 2s;
+}
+
+/*todo KEYFRAMES  */
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
