@@ -1,0 +1,282 @@
+/*! GENERAL  */
+.game-screen {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1.5s;
+}
+.game-screen.hidden {
+  width: 0px;
+}
+.game-screen.hidden > nav {
+  height: 100px;
+  display: none;
+}
+.game-screen.hidden > button {
+  display: none;
+}
+
+/*! ASTEROID CSS  */
+#asteroidScreen {
+  background-image: url('/images/asteroidsBG.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.asteroidNav {
+  height: 10%;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  justify-content: center;
+  color: white;
+}
+.asteroidNav > h3 {
+  color: white;
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 100;
+  font-size: clamp(10px, 5vw, 50px);
+  letter-spacing: 20px;
+  text-shadow: 0 0 2px #4dbdcc, 0 0 5px #00f0ff, 0 0 7px #00f0ff,
+    0 0 5px #00f0ff, 0 0 15px #00f0ff, 0 0 7px #00f0ff, 0 0 12px #00f0ff,
+    0 0 17px #00f0ff, 0px 0px 8px rgba(206, 89, 55, 0);
+}
+
+.asteroidNav > button:nth-child(1) {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+.asteroidNav > button:nth-child(1) > img {
+  transform: rotate(180deg);
+  height: 220%;
+  margin-left: 35px;
+  animation: selectorMotion 2s infinite ease-in-out;
+}
+.asteroidNav > button:nth-child(3) {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: selectorMotion 2s infinite ease-in-out;
+}
+.asteroidNav > button:nth-child(3) > img {
+  height: 220%;
+}
+
+#asteroidDiv {
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+/*! TETRIS CSS  */
+#tetrisScreen {
+  background-image: url('/images/tetrisBG.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.tetrisNav {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent;
+}
+
+.tetrisNav > img {
+  height: 55px;
+}
+.tetrisNav > button {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.tetrisNav > button > img {
+  height: 44px;
+  margin-right: 20px;
+  animation: selectorMotion 2s infinite ease-in-out;
+}
+#tetrisMain {
+  display: flex;
+  height: 90%;
+  gap: 20px;
+  margin-left: 150px;
+}
+
+#tetrisDiv {
+  width: 350px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(39, 39, 39);
+  box-shadow: 0px 0px 13px 12px rgba(0, 0, 0, 0.49) inset;
+  -webkit-box-shadow: 0px 0px 13px 12px rgba(0, 0, 0, 0.49) inset;
+  -moz-box-shadow: 0px 0px 13px 12px rgba(0, 0, 0, 0.49) inset;
+}
+#tetrisAccesoryDiv {
+  height: 350px;
+  width: 175px;
+  background-color: rgba(0, 0, 0, 0.432);
+  font-family: 'Press Start 2P', system-ui;
+  border-radius: 5px;
+}
+#tetrisAccesoryDiv > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+}
+#tetrisAccesoryDiv > h3 {
+  padding: 10px;
+  font-size: 15px;
+}
+#tetrisAccesoryDiv > h5 {
+  text-align: center;
+}
+
+/*! TICTACTOE CSS  */
+#ticTacToeScreen {
+  background-image: url('/images/ticTacToeBG2.jpg');
+  background-size: cover;
+}
+.tictactoeNav {
+  height: 10%;
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+.tictactoeNav > h3 {
+  margin-top: 30px;
+  font-family: 'rightChalk', sans-serif;
+  font-size: clamp(15px, 5vw, 45px);
+  color: #faf9f6;
+}
+
+.tictactoeNav > button {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+.tictactoeNav > button > img {
+  height: 225%;
+  animation: selectorMotion 2s infinite ease-in-out;
+}
+
+.displayNone {
+  display: none !important; /* Esto rompe la jerarquia de prioridades en elementos */
+}
+
+@keyframes selectorMotion {
+  0%,
+  100% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+}
+
+/* ! MEDIA QUERIES */
+
+@media (max-width: 720px) {
+  /* TODO TICTACTOE */
+  .tictactoeNav > button > img {
+    height: 150%;
+    padding-bottom: 20px;
+    animation: selectorMotion 2s infinite ease-in-out;
+  }
+  /* TODO ASTEROID */
+
+  #asteroidDiv {
+    width: 80%;
+  }
+  #asteroidMainMenu {
+    width: 50%;
+    height: 250px;
+  }
+  #asteroidMainMenu.gameMode {
+    width: 74%;
+    height: 75vh;
+    transition: all 1s;
+    animation: fadeOut 1s 1s ease-in;
+    z-index: 2;
+  }
+  .asteroidNav > button:nth-child(1) > img {
+    height: 135%;
+  }
+  .asteroidNav > button:nth-child(3) > img {
+    height: 135%;
+  }
+
+  /* todo TETRIS */
+
+  #tetrisMain {
+    flex-direction: column;
+    margin: 0;
+    height: 80vh;
+  }
+
+  #tetrisAccesoryDiv {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  #tetrisAccesoryDiv > div {
+    width: 100%;
+    justify-content: start;
+  }
+  #tetrisAccesoryDiv > h3 {
+    font-size: 7px;
+  }
+  #tetrisAccesoryDiv > h5 {
+    text-align: center;
+    font-size: 10px;
+  }
+}
+@media (max-width: 350px) {
+  .tictactoeNav > button > img {
+    height: 100%;
+    padding-bottom: 20px;
+    animation: selectorMotion 2s infinite ease-in-out;
+  }
+  /* TODO ASTEROID */
+
+  .asteroidNav > button:nth-child(1) > img {
+    height: 90%;
+  }
+  .asteroidNav > button:nth-child(3) > img {
+    height: 90%;
+  }
+
+  /* TODO TETRIS */
+  #tetrisDiv {
+    width: 210px;
+    height: 550px;
+  }
+  #tetrisMain {
+    height: 70vh;
+  }
+}

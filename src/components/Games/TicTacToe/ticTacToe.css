@@ -1,0 +1,101 @@
+#tictactoeDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+#ticTacToeGridDiv {
+  background-image: url('./images/grid2TTT.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0);
+  padding-bottom: 15px;
+  width: 40%;
+  aspect-ratio: 1/1;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(3, 28%);
+  gap: 5px;
+}
+
+.cell {
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+.xoMark {
+  height: 75%;
+}
+
+#tictactoeMainMenu {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuTictactoeOption {
+  border: none;
+  background-color: transparent;
+  font-family: 'rightChalk', sans-serif;
+  font-size: clamp(
+    20px,
+    5vw,
+    60px
+  ); /* Función para valores fluidos. Sirve para que la fuente se adapte a un tamaño pero respetando unos limites. el primer valor es el más pequeño que puede tener, el segundo es el preferido y el último es el máximo que puede tener */
+  color: #e2e2e2;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.menuTictactoeOption:hover {
+  scale: 1.2;
+  transition: all 0.2s ease-in-out;
+}
+
+#tttLoseMenu {
+  display: flex;
+  height: 250px;
+  width: 25%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  gap: 100px;
+  font-family: 'rightChalk', sans-serif;
+  font-size: clamp(15px, 5vw, 45px);
+  color: #e2e2e2;
+}
+
+#loseMenuTitle {
+  text-align: center;
+}
+
+#tttLoseMenu > form {
+  display: none;
+}
+
+#tttLoseMenu > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#tttLoseMenu > div > button {
+  border: none;
+  background-color: transparent;
+  font-family: 'rightChalk', sans-serif;
+  font-size: 20px;
+  color: #e2e2e2;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#tttLoseMenu > div > button:hover {
+  scale: 1.2;
+  transition: all 0.2s ease-in-out;
+}

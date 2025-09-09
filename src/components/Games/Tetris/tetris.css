@@ -1,0 +1,68 @@
+#tetrisDiv > canvas {
+  background-color: rgb(39, 39, 39);
+  box-shadow: 0px 0px 13px 12px rgba(0, 0, 0, 0.49) inset;
+  -webkit-box-shadow: 0px 0px 13px 12px rgba(0, 0, 0, 0.49) inset;
+  -moz-box-shadow: 0px 0px 13px 12px rgba(0, 0, 0, 0.49) inset;
+}
+
+#tetrisTitle {
+  position: relative;
+  top: 20px;
+  left: 16.5px;
+  z-index: 2;
+}
+
+.tetrisScoreBoardDiv {
+  width: 30%;
+  height: 400px;
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+  color: rgb(252, 252, 252);
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.842);
+  animation: fadeIn2 2s ease-in forwards;
+  font-family: 'Press Start 2P', system-ui;
+  transition: all 0.5s ease-in-out;
+}
+
+.tetrisScoreBoardDiv > div {
+  font-size: 10px;
+}
+
+.tetrisScoreBoardDiv > button {
+  background-color: #50505093;
+  border: none;
+  font-family: 'Press Start 2P', system-ui;
+  color: white;
+  font-size: 18px;
+  padding: 4px;
+}
+
+.tetrisScoreBoardDiv > button:hover {
+  background-color: #c2c2c293;
+}
+
+@media (max-width: 720px) {
+  .tetrisScoreBoardDiv {
+    width: 70%;
+  }
+  #tetrisTitle {
+    top: -20px;
+    left: -47.5px;
+    width: 150%;
+  }
+}
+
+@media (max-width: 350px) {
+  #tetrisTitle {
+    top: -20px;
+    left: -30px;
+    width: 150%;
+  }
+}

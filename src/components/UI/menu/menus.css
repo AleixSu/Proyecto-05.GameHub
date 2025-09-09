@@ -1,0 +1,191 @@
+/*! ASTEROID  */
+#asteroidLoseMenu {
+  width: 20%;
+  height: 200px;
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+  color: rgb(252, 252, 252);
+  opacity: 0;
+
+  background-image: linear-gradient(rgb(15, 15, 15), rgb(32, 32, 32)),
+    linear-gradient(135deg, #00f0ff, #001d3d);
+  border: 3px solid transparent;
+  -webkit-box-shadow: #fff 0 0px 4px, #00f0ff 0 0px 10px, #00f0ff 0 0px 20px,
+    #00f0ff 0 0px 40px, 0px 0px 0px 0px rgba(86, 255, 110, 0);
+  box-shadow: #fff 0 0px 2px, #00f0ff 0 0px 5px, #00f0ff 0 0px 10px,
+    #00f0ff 0 0px 30px, 0px 0px 0px 0px rgba(86, 255, 110, 0);
+  font-family: 'Syncopate', sans-serif;
+  animation: fadeIn2 2s 2s ease-in forwards;
+}
+#asteroidLoseMenu > form {
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.089);
+}
+#asteroidLoseMenu > form > input {
+  width: 70px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Michroma', sans-serif;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-bottom: 1px white solid;
+  background-color: transparent;
+}
+#asteroidLoseMenu > form > input::placeholder {
+  color: white;
+  filter: brightness(0.3);
+}
+#asteroidLoseMenu > form > input:focus {
+  outline: none;
+}
+
+#asteroidLoseMenu > div > button {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+  color: rgba(252, 252, 252, 0.521);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin: 15px;
+  margin-bottom: 0;
+}
+#asteroidLoseMenu > div > button:hover {
+  color: rgba(252, 252, 252, 0.938);
+}
+
+/*! TETRIS  */
+
+#tetrisMainMenu {
+  width: 20%;
+  height: 200px;
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border-radius: 2px;
+  color: rgb(252, 252, 252);
+  transition: all 1s ease-in-out;
+
+  background-image: linear-gradient(rgb(22, 121, 214), rgb(14, 73, 110)),
+    linear-gradient(135deg, #00f0ff, #001d3d);
+  border: 5px outset rgb(47, 147, 240);
+}
+
+#tetrisMainMenu > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menuTetrisOption {
+  background-color: transparent;
+  cursor: pointer;
+  font-family: 'Press Start 2P', system-ui;
+  border: none;
+  color: #ffffff;
+  background: #50505093;
+  text-shadow: 4px 3px 0 #7a7a7a;
+  font-size: 25px;
+}
+.menuTetrisOption:hover {
+  background-color: transparent;
+  font-family: 'Press Start 2P', system-ui;
+  border: none;
+
+  background: #99999993;
+  text-shadow: 4px 3px 0 #7a7a7a;
+}
+
+#tetrisLoseMenu {
+  width: 20%;
+  height: 170px;
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+  color: rgb(252, 252, 252);
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.842);
+  animation: fadeIn2 2s ease-in forwards;
+  font-family: 'Press Start 2P', system-ui;
+  text-align: center;
+}
+#tetrisLoseMenu > form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+#tetrisLoseMenu > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#tetrisLoseMenu > div > button {
+  background-color: #50505093;
+  border: none;
+  font-family: 'Press Start 2P', system-ui;
+  color: white;
+  font-size: clamp(8px, 2vw, 18px);
+  padding: 4px;
+}
+#tetrisLoseMenu > div > button:hover {
+  background-color: #c2c2c293;
+}
+
+@keyframes fadeIn2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ! MEDIA QUERIES */
+
+@media (max-width: 720px) {
+  #asteroidLoseMenu {
+    width: 50%;
+    height: 200px;
+  }
+  #tetrisLoseMenu {
+    width: 50%;
+    height: 170px;
+  }
+
+  #tetrisMainMenu {
+    width: 50%;
+    height: 200px;
+    display: block;
+  }
+
+  .menuTetrisOption {
+    font-size: clamp(8px, 2vw, 25px);
+    height: 20px;
+    z-index: 3;
+  }
+}

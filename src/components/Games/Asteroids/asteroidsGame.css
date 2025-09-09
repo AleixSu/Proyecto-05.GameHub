@@ -1,0 +1,209 @@
+#asteroidMainMenu {
+  width: 30%;
+  height: 250px;
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border-radius: 10px;
+  color: rgb(252, 252, 252);
+  transition: all 1s ease-in-out;
+
+  background-image: linear-gradient(rgb(15, 15, 15), rgb(32, 32, 32)),
+    linear-gradient(135deg, #00f0ff, #001d3d);
+  border: 3px solid transparent;
+  -webkit-box-shadow: #fff 0 0px 4px, #00f0ff 0 0px 10px, #00f0ff 0 0px 20px,
+    #00f0ff 0 0px 40px, 0px 0px 0px 0px rgba(86, 255, 110, 0);
+  box-shadow: #fff 0 0px 2px, #00f0ff 0 0px 5px, #00f0ff 0 0px 10px,
+    #00f0ff 0 0px 30px, 0px 0px 0px 0px rgba(86, 255, 110, 0);
+  font-family: 'Syncopate', sans-serif;
+}
+
+#mainMenu {
+  font-size: clamp(10px, 5vw, 30px);
+  text-shadow: 0 0 5px #4dbdcc, 0 0 10px #00f0ff, 0 0 15px #00f0ff,
+    0 0 10px #00f0ff, 0 0 30px #00f0ff, 0 0 15px #00f0ff, 0 0 25px #00f0ff,
+    0 0 35px #00f0ff, 0px 0px 16px rgba(206, 89, 55, 0);
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#asteroidMainMenu > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#asteroidMainMenu.gameMode {
+  width: 47.5%;
+  height: 75vh;
+  transition: all 1s;
+  animation: fadeOut 1s 1s ease-in;
+  z-index: 2;
+}
+
+.menuOption {
+  font-family: 'Syncopate', sans-serif;
+  font-size: clamp(10px, 5vw, 20px);
+  border: none;
+  background-color: transparent;
+  color: rgb(252, 252, 252);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.hidden {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+  color: rgb(252, 252, 252);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.menuOption:hover {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+  color: rgb(88, 88, 88);
+}
+
+#asteroidDiv > canvas {
+  border: 3px solid transparent;
+  position: relative;
+  -webkit-box-shadow: #fff 0 0px 4px, #00f0ff 0 0px 10px, #00f0ff 0 0px 20px,
+    #00f0ff 0 0px 40px, 0px 0px 0px 0px rgba(86, 255, 110, 0);
+  box-shadow: #fff 0 0px 2px, #00f0ff 0 0px 5px, #00f0ff 0 0px 10px,
+    #00f0ff 0 0px 30px, 0px 0px 0px 0px rgba(86, 255, 110, 0);
+  font-family: 'Syncopate', sans-serif;
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+#asteroidMainMenu.scoreBoardMode {
+  width: 40%;
+  height: 50vh;
+  gap: 0;
+  transition: all 1s;
+  animation: startAligner 0s 0.5s forwards;
+}
+
+.asteroidScoreBoardDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.scoreBoardTitle {
+  color: white;
+  padding-bottom: 5px;
+  width: 100%;
+  letter-spacing: 3px;
+  font-weight: 100;
+  border-bottom: solid 2px white;
+  opacity: 0;
+  animation: fadeIn 0.5s 0.3s forwards;
+  transition: all 0.3s;
+}
+
+.scoreList {
+  width: 100%;
+  height: 80%;
+  opacity: 0;
+  animation: fadeIn 0.5s 0.3s forwards;
+  transition: all 0.3s;
+}
+
+.scoreList > ul {
+  list-style: none;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding-left: 0;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.scoreList > ul > li {
+  list-style: none;
+  margin-bottom: 10px;
+  color: #ffffff9f;
+  font-size: clamp(10px, 2vw, 15px);
+}
+
+#asteroidBackToMenu {
+  font-family: 'Syncopate', sans-serif;
+  align-self: end;
+  font-size: clamp(10px, 2vw, 15px);
+  border: none;
+  border-left: 1px solid rgba(252, 252, 252, 0.521);
+  background-color: transparent;
+  color: rgba(252, 252, 252, 0.521);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin: 15px;
+  margin-bottom: 0;
+  opacity: 0;
+  animation: fadeIn 0.5s 0.3s forwards;
+}
+#asteroidBackToMenu:hover {
+  color: rgba(252, 252, 252, 0.938);
+  border-left: 1px solid rgba(252, 252, 252, 0.938);
+}
+
+.scoreDiv {
+  width: 10%;
+  height: 40px;
+  color: white;
+
+  position: absolute;
+  top: 120px;
+  left: 27%;
+}
+.scoreDiv > h4 {
+  height: 100%;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/*todo KEYFRAMES  */
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes startAligner {
+  from {
+    align-items: center;
+  }
+  to {
+    align-items: start;
+  }
+}
+
+/* ! MEDIA QUERIES */
+
+@media (max-width: 720px) {
+  .scoreDiv {
+    left: 18%;
+  }
+
+  #asteroidMainMenu.scoreBoardMode {
+    width: 80%;
+  }
+}
